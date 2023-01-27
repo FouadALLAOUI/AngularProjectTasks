@@ -7,4 +7,9 @@ import { Injectable } from '@angular/core';
 export class TaskService {
 
   constructor(private http: HttpClient) { }
+
+  findAll(){
+    return this.http.get("htstp://localhost:5000/tasks");
+  }
+
 }
