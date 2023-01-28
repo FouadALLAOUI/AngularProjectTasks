@@ -1,14 +1,3 @@
 {
-    "tasks":[
-        {
-            "id": 1,
-            "label": "Learn SpringBoot",
-            "completed": false
-        },
-        {
-            "id": 2,
-            "label": "Learn Angular",
-            "completed": true
-        }
-    ]
+  "tasks": []
 }

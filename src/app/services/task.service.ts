@@ -15,7 +15,11 @@ export class TaskService {
   }
 
   delete(id: any){
-    return this.http.delete(this.apiUrl+"/"+id)
+    return this.http.delete(this.apiUrl+"/"+id);
+  }
+
+  persist(task: Task){
+    return this.http.post(this.apiUrl, task);
   }
 
 }
