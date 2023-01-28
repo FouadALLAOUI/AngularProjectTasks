@@ -38,8 +38,14 @@
 
             <li *ngFor="let task of tasks" class="list-group-item d-flex justify-content-between align-items-center">
                 {{task.label}}
-                <span class="badge badge-secondary badge-pill">
-                    {{task.completed}}
+                <span [ngClass]="{
+                   'badge-info': task.completed,
+                   'badge-danger': !task.completed
+                }" class="badge badge-danger badge-pill">
+                    <i class="fa" [ngClass]="{
+                        'fa-thumbs-up': task.completed,
+                        'fa-thumbs-down': !task.completed
+                    }"></i>
                 </span>
             </li>
 

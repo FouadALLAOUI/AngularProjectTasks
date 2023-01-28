@@ -8,7 +8,7 @@
         {
             "id": 2,
             "label": "Learn Angular",
-            "completed": false
+            "completed": true
         }
     ]
 }
