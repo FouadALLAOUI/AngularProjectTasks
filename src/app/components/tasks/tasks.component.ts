@@ -10,7 +10,9 @@ import { TaskService } from 'src/app/services/task.service';
 
 export class TasksComponent implements OnInit {
   
-  editForm = false
+  searchText = '';
+  showForm = false;
+  editForm = false;
 
   myTask: Task={
     label: '',
@@ -42,6 +44,7 @@ export class TasksComponent implements OnInit {
         .subscribe((task) => {
           this.tasks = [task, ...this.tasks]  //spread operator
           this.resetTask();
+          this.showForm = false;
       });
   }
 
