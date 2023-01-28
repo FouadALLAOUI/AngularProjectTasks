@@ -37,6 +37,11 @@
         <ul class="list-group">
 
             <li *ngFor="let task of tasks" class="list-group-item d-flex justify-content-between align-items-center">
+                
+                <button class="btn btn-warning btn-sm">
+                    <i class="fa fa-pencil"></i>
+                </button>
+                
                 {{task.label}}
                 <span [ngClass]="{
                    'badge-info': task.completed,
@@ -47,6 +52,9 @@
                         'fa-thumbs-down': !task.completed
                     }"></i>
                 </span>
+                <button class="btn btn-sm btn-dark">
+                    <i class="fa fa-trash"></i>
+                </button>
             </li>
 
         </ul>
