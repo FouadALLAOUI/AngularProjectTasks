@@ -19,7 +19,7 @@ export class TaskService {
   }
 
   persist(task: Task){
-    return this.http.post(this.apiUrl, task);
+    return this.http.post<Task>(this.apiUrl, task);
   }
 
 }
