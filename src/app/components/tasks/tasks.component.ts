@@ -10,6 +10,11 @@ import { TaskService } from 'src/app/services/task.service';
 
 export class TasksComponent implements OnInit {
   
+  myTask: Task={
+    label: '',
+    completed: false
+  }
+
   tasks: Task[]  = [];
 
   constructor(private taskService: TaskService ){}
@@ -28,6 +33,10 @@ export class TasksComponent implements OnInit {
       .subscribe(() => {
         this.tasks = this.tasks.filter(task => task.id != id)
       })
+  }
+
+  persistTask(){
+      //this.taskService.persist();
   }
 
 }

@@ -14,16 +14,16 @@
 
         <div class="form-grouo">
             <label for="label"></label>
-            <input id="label" type="text" class="form-control">
+            <input [(ngModel)]="myTask.label" id="label" type="text" class="form-control">
         </div>
 
         <div class="form-check my-2">
           <label class="form-check-label">
-            <input type="checkbox" class="form-check-input">
+            <input [(ngModel)]="myTask.completed" type="checkbox" class="form-check-input">
                 Completed
           </label>
         </div>
-
+        {{myTask | json }}
         <button class="btn btn-success btn-block">
             <i class="fa fa-send"></i>New Task
         </button>
