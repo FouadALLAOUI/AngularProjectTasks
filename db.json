@@ -1,33 +1,33 @@
 {
   "tasks": [
     {
-      "label": "Lean SpringBoot ",
-      "completed": true,
+      "label": "Learn Spring Boot ",
+      "completed": false,
       "id": 1
     },
     {
-      "label": "Lean SpringBMVC",
+      "label": "Learn Spring MVC",
       "completed": false,
       "id": 2
     },
     {
-      "label": "Lean ReactJs",
+      "label": "Learn ReactJs",
       "completed": false,
       "id": 3
     },
     {
-      "label": "Lean VueJs",
-      "completed": true,
+      "label": "Learn VueJs",
+      "completed": false,
       "id": 4
     },
     {
-      "label": "Lean NestJs",
-      "completed": true,
+      "label": "Learn NestJs",
+      "completed": false,
       "id": 5
     },
     {
-      "label": "Lean Angular",
-      "completed": false,
+      "label": "Learn Angular",
+      "completed": true,
       "id": 6
     },
     {
