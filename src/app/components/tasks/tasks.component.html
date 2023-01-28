@@ -24,7 +24,10 @@
           </label>
         </div>
         <!--{{myTask | json }}-->
-        <button (click)="persistTask()" class="btn btn-success btn-block">
+        <button *ngIf="editForm" (click)="updateTask()" class="btn btn-warning btn-block">
+            <i class="fa fa-refresh"></i>Update Task
+        </button>
+        <button *ngIf="!editForm" (click)="persistTask()" class="btn btn-success btn-block">
             <i class="fa fa-send"></i>New Task
         </button>
 
@@ -38,7 +41,7 @@
 
             <li *ngFor="let task of tasks" class="list-group-item d-flex justify-content-between align-items-center">
                 
-                <button class="btn btn-warning btn-sm">
+                <button (click)="editTask(task)" class="btn btn-warning btn-sm">
                     <i class="fa fa-pencil"></i>
                 </button>
                 

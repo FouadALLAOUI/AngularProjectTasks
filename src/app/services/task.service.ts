@@ -25,5 +25,9 @@ export class TaskService {
   completed(id: any, completed: boolean){
     return this.http.patch(this.apiUrl+"/"+id, {completed: !completed})
   }
+ 
+  update(task: Task){
+    return this.http.put<Task>(this.apiUrl+"/"+task.id, task)
+  }
 
 }

@@ -10,6 +10,8 @@ import { TaskService } from 'src/app/services/task.service';
 
 export class TasksComponent implements OnInit {
   
+  editForm = false
+
   myTask: Task={
     label: '',
     completed: false
@@ -55,6 +57,18 @@ export class TasksComponent implements OnInit {
       .subscribe(() => {
         task.completed  =!task.completed
       })
-  } 
+  }
 
+  editTask(task: Task){
+    this.myTask = task
+    this.editForm = true;
+  }
+
+  updateTask(){
+    this.taskService.update(this.myTask)
+      .subscribe(task => {
+         this.resetTask()
+         this.editForm = false
+      })
+  }
 }
