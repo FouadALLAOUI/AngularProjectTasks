@@ -37,9 +37,9 @@ export class TasksComponent implements OnInit {
 
   persistTask(){
       this.taskService.persist(this.myTask)
-      .subscribe((task) => {
-        this.tasks = [task, ...this.tasks]  //spread operator
-        this.resetTask();
+        .subscribe((task) => {
+          this.tasks = [task, ...this.tasks]  //spread operator
+          this.resetTask();
       });
   }
 
@@ -49,5 +49,12 @@ export class TasksComponent implements OnInit {
      completed: false
     }
   }
+
+  toggleCompleted(task: Task){
+    this.taskService.completed(task.id, task.completed)
+      .subscribe(() => {
+        task.completed  =!task.completed
+      })
+  } 
 
 }
