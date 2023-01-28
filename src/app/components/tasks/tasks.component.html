@@ -45,14 +45,14 @@
                 {{task.label}}
                 <span [ngClass]="{
                    'badge-info': task.completed,
-                   'badge-danger': !task.completed
+                    'badge-danger': !task.completed
                 }" class="badge badge-danger badge-pill">
                     <i class="fa" [ngClass]="{
                         'fa-thumbs-up': task.completed,
                         'fa-thumbs-down': !task.completed
                     }"></i>
                 </span>
-                <button class="btn btn-sm btn-dark">
+                <button (click)="deleteTask(task.id)" class="btn btn-sm btn-dark">
                     <i class="fa fa-trash"></i>
                 </button>
             </li>
