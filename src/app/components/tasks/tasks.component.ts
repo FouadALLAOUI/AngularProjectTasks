@@ -74,4 +74,9 @@ export class TasksComponent implements OnInit {
          this.editForm = false
       })
   }
+
+  searchTasks(){
+    this.tasks = this.tasks.filter((tast) => tast.label.includes(this.searchText))
+  }
+
 }
