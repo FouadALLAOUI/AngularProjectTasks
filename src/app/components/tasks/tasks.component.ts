@@ -79,7 +79,7 @@ export class TasksComponent implements OnInit {
   }
 
   searchTasks(){
-    this.resultTasks = this.tasks.filter((tast) => tast.label.includes(this.searchText))
+    this.resultTasks = this.tasks.filter((tast) => tast.label.toLowerCase().includes(this.searchText.toLowerCase()))
   }
 
 }
